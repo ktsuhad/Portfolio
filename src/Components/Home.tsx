@@ -1,4 +1,5 @@
 import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
+import { TypeAnimation } from "react-type-animation";
 const Hero = () => {
   return (
     <section
@@ -25,9 +26,14 @@ const Hero = () => {
             </span>
             My Name is <span>Suhad</span>
           </h1>
-          <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Full-stack Developer
-          </h4>
+          {/* typing animation */}
+          <TypeAnimation
+            sequence={[`Full-stack Developer.`, 1000, ""]}
+            speed={50}
+            style={{ whiteSpace: "pre-line" }}
+            className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600"
+            repeat={Infinity}
+          />
           <button className="btn-primary mt-6">
             <a href="#contact">Contact Me</a>
           </button>

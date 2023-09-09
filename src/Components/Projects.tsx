@@ -10,20 +10,16 @@ const Projects = () => {
       img: "/assets/Images/project-images/Movie-App.png",
       title: "Movie App",
       githubLink: "https://github.com/ktsuhad/Movie-App",
-      liveDemo: "",
-      animation: "fade-up",
     },
     {
       img: "/assets/Images/project-images/E-Cart.png",
       title: "E-Cart",
       githubLink: "https://github.com/ktsuhad/e-commerce-app",
-      liveDemo: "",
     },
     {
       img: "/assets/Images/project-images/TravelHorde.png",
       title: "TravelHorde",
       githubLink: "https://github.com/ktsuhad/travelHorde",
-      liveDemo: "",
     },
     {
       img: "/assets/Images/project-images/Whether-App.png",
@@ -35,7 +31,6 @@ const Projects = () => {
       img: "/assets/Images/project-images/Food-Recipe-App.png",
       title: "Food-Recipe-App",
       githubLink: "https://github.com/ktsuhad/Food-Recipie-app",
-      liveDemo: "",
     },
   ];
   return (
@@ -65,18 +60,27 @@ const Projects = () => {
                   data-aos="zoom-in-up"
                   className="h-fit w-full p-4 bg-slate-700 rounded-xl"
                 >
-                  <img src={project.img} alt="" className="rounded-lg object-cover" />
+                  <img
+                    src={project.img}
+                    alt=""
+                    className="rounded-lg object-cover"
+                  />
                   <h3 className="text-xl my-4">{project.title}</h3>
                   <div className="flex gap-3">
                     <a
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      className="text-cyan-600 bg-gray-800 rounded-md px-2 py-1 inline-block"
                     >
                       Github
                     </a>
-                    <a href={project.liveDemo} className="text-cyan-600">
+                    <a
+                      href={project.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cyan-600"
+                    >
                       Live Demo
                     </a>
                   </div>

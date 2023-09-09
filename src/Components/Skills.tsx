@@ -13,7 +13,7 @@ const Skills = () => {
     },
     {
       logo: <BiLogoCss3 />,
-      level: "Expect",
+      level: "Expert",
       count: 90,
       animation: "fade-right",
     },

@@ -19,7 +19,7 @@ const HireMe = () => {
             goals.
           </p>
           <button className="btn-primary mt-10">
-            <a href="#contact">Hireme</a>
+            <a href="#contact">Hire Me</a>
           </button>
         </div>
         <img

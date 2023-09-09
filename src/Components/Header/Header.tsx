@@ -2,7 +2,8 @@ import { useState } from "react";
 import "../Header/Header.scss";
 import { Close, Menu } from "@mui/icons-material";
 const Header = () => {
-  const [OpenMenu, setOpenMenu] = useState(false);
+  const [OpenMenu, setOpenMenu] = useState<Boolean>(false);
+  const [selectedMenuItem, setSelectedMenuItem] = useState<number | null>(null);
 
   const menulinks = [
     {
@@ -42,7 +43,7 @@ const Header = () => {
 
         {/* //middle */}
         <div className="flex-1 hidden md:block">
-          <ul className="flex  items-center gap-10 font-roboto">
+          <ul className="flex  items-center gap-10 font-serif tracking-wide font-medium ">
             {menulinks.map((menu, i) => (
               <li key={i}>
                 <a href={menu.link} className="menu-link">
@@ -72,20 +73,38 @@ const Header = () => {
           {OpenMenu ? <Close /> : <Menu />}
         </div>
 
+        {/* Overlay for mobile menu */}
+        {OpenMenu && (
+          <div
+            className={`md:hidden absolute top-0 w-full h-screen bg-black/50 duration-300 z-20 ${
+              OpenMenu ? "right-0" : "-right-full"
+            }`} // Overlay background
+            onClick={() => setOpenMenu(false)} // Close the mobile menu when clicking the overlay
+          ></div>
+        )}
+
         <div
-          className={`md:hidden absolute top-0 w-2/3 h-screen bg-gray-800 duration-500 ${
+          className={`md:hidden absolute top-0 w-2/3 h-screen bg-gray-800 duration-500 z-30 ${
             OpenMenu ? "right-0" : "-right-full"
           }`}
         >
           {OpenMenu && (
             <ul className="flex flex-col justify-center  gap-6 font-ysabeau px-1 py-6 mt-14">
               {menulinks.map((menu, i) => (
-                <li
-                  key={i}
-                  onClick={() => setOpenMenu(false)}
-                  className="hover:bg-gray-800 border-l-2 border-l-rose-600 px-5"
-                >
-                  <a href={menu.link} className="menu-link">
+                <li className="">
+                  <a
+                    href={menu.link}
+                    key={i}
+                    onClick={() => {
+                      setOpenMenu(false); // Close the mobile menu
+                      setSelectedMenuItem(i); // Set the selected menu item index
+                    }}
+                    className={`block py-2 px-4 text-white hover:bg-gray-900 ${
+                      selectedMenuItem === i
+                        ? "border-l-2 border-l-rose-600"
+                        : ""
+                    }`}
+                  >
                     {menu.name}
                   </a>
                 </li>
