@@ -14,10 +14,10 @@ const Contact = () => {
     try {
       setLoading(true);
       const result = await emailjs.sendForm(
-        import.meta.env.VITE_SERVICE_ID || "",
-        import.meta.env.VITE_TEMPLATE_ID || "",
+        import.meta.env.VITE_SERVICE_ID ,
+        import.meta.env.VITE_TEMPLATE_ID ,
         form.current,
-        import.meta.env.VITE_PUBLIC_ID || ""
+        import.meta.env.VITE_PUBLIC_ID 
       );
       if (result.status === 200) {
         setMessage("Email sent successfully!");
@@ -80,7 +80,9 @@ const Contact = () => {
             {message && (
               <p
                 className={`text-center ${
-                  message.includes("failed") ? "text-red-500" : "text-green-500"
+                  message.includes("successfully")
+                    ? "text-green-500"
+                    : "text-red-500"
                 }`}
               >
                 {message}
