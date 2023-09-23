@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <nav
       data-aos="fade-down"
-      className="bg-[#444] w-full h-20 fixed inset-0 flex items-center text-white z-[999] px-2"
+      className="bg-gradient-to-r from-[#914370] to-[#000] w-full h-20 fixed inset-0 flex items-center text-white z-[999] px-2"
     >
       <div className="container mx-auto flex items-center justify-between p-2 gap-5">
         {/* //left */}

@@ -9,13 +9,15 @@ const Hero = () => {
       {/* image container */}
       <div
         data-aos="fade-right"
-        className="flex-1 flex items-center justify-center h-[500px]"
+        className="flex-1 flex items-center justify-center h-[500px] relative"
       >
         <img
-          src="/assets/Images/hero-removebg-preview.png"
+          src="/assets/Images/hero.png"
           alt=""
           className="md:w-3/6 h-full object-cover rounded-lg"
         />
+        <span className="absolute top-40 -z-10 w-64 h-64 bg-gradient-to-r from-[#8EC5FC] to-[#E0C3FC] rounded-md rotate-45"></span>
+        <span></span>
       </div>
       <div data-aos="fade-left" className="flex-1">
         <div>
