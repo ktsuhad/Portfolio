@@ -57,7 +57,7 @@ const Header = () => {
         {/* //right */}
         <div className="hidden md:block">
           <div className="flex-1 items-center gap-4">
-            <button className="border rounded-md px-5 py-1.5 hover:bg-black/75 duration-300">
+            <button className="border rounded-md px-5 py-1.5 hover:bg-[#ff3c78] hover:text-white duration-300">
               <a href="/assets/Resume/SuhadKt.pdf" download="SuhadKt.pdf">
                 Resume
               </a>

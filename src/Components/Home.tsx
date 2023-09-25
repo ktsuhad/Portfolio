@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex py-10 md:flex-row flex-col items-center"
+      className="min-h-screen flex py-10 md:flex-row flex-col items-center "
     >
       {/* image container */}
       <div
@@ -12,12 +12,10 @@ const Hero = () => {
         className="flex-1 flex items-center justify-center h-[500px] relative"
       >
         <img
-          src="/assets/Images/hero.png"
+          src="/assets/Images/Home.jpeg"
           alt=""
-          className="md:w-3/6 h-full object-cover rounded-lg"
+          className="w-full md:w-2/4 object-cover rounded-lg"
         />
-        <span className="absolute top-40 -z-10 w-64 h-64 bg-gradient-to-r from-[#8EC5FC] to-[#E0C3FC] rounded-md rotate-45"></span>
-        <span></span>
       </div>
       <div data-aos="fade-left" className="flex-1">
         <div>
